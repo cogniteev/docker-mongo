@@ -38,7 +38,6 @@ RUN set -x \
 	&& mv /etc/mongod.conf /etc/mongod.conf.orig
 
 RUN mkdir -p /data/db && chown -R mongodb:mongodb /data/db
-VOLUME /data/db
 
 COPY docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
